@@ -23,5 +23,5 @@ Table C %>%
   left_join(ContinentData) %>%
   group_by(Continent, Year) %>%
   summarise(total = sum(Value))
+  
 ```
-
