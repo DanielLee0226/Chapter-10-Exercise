@@ -11,3 +11,18 @@ Name: Daniel Lee
   Some of the cases in both demographics and geographic table don't match for example, both table contain Afghanistan however, Akrotiri is only contained in Demographics while Aland is only contained in Country Centroids.
 
 ## Probelm 10.3
+1. Table B --> 
+```{r}
+Table B %>%
+  mutate(diff = Y2001-Y2000)
+```
+
+2. Table C -->
+```{r}
+Table C %>%
+  left_join(ContinentData) %>%
+  group_by(Continent, Year) %>%
+  summarise(total = sum(Value))
+  
+```
+
